@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+    <title>Auto-Summarize my Article</title>
+    <link rel="stylesheet" href="{{ url_for('static',
+       filename='style.css') }}">
+</head>
+
+
+<body>
+
+<form class="form-style-9">
+    <ul>
+
+
+        {% from "_formhelpers.html" import render_field %}
+        <div><h3 style="color: brown">Give me the Gist!</h3></div>
+        <form method=post action="/summary">
+            <dl>
+                <h5> Enter an article URL </h5> {{ render_field(form.articleurl) }}
+            </dl>
+            <dl>
+                <h5> Number of sentences required for the summary </h5> {{ render_field(form.numsent) }}
+            </dl>
+            <input type=submit value=' Give me the Gist' name='submit_btn' style="color: brown ">
+        </form>
+
+
+
+    </ul>
+</form>
+
+</body>
+
+
+</html>

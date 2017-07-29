@@ -1,0 +1,15 @@
+  <!doctype html>
+   <html>
+     <head>
+       <title>Give me the Gist!</title>
+     <link rel="stylesheet" href="{{ url_for('static',
+       filename='style.css') }}">
+     </head>
+     <body>
+
+   <div><img src={{ webimages }}></div>
+    <div> {{ name }}</div>
+     </body>
+
+  <input type=button name=backButton id=backButton value="Back" onclick="javascript:history.go(-1)">
+</html>
